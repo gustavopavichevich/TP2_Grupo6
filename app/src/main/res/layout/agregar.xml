@@ -12,8 +12,8 @@
 
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="386dp"
+        android:layout_height="35dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="FORMULARIO DE CONTACTO"
@@ -24,10 +24,10 @@
 
     <TextView
         android:id="@+id/txt_Segundo_N"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="384dp"
+        android:layout_height="48dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:text="Este es un formulario destinado al registro de personas, sus datos personales e intereses."
         android:textSize="19sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,7 +36,7 @@
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="371dp"
-        android:layout_height="413dp"
+        android:layout_height="440dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
         android:scrollbars="vertical"
@@ -107,6 +107,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:hint="Telefono"
                 android:inputType="phone" />
 
             <Spinner
@@ -115,29 +116,23 @@
                 android:layout_height="wrap_content"
                 android:entries="@array/tipo" />
         </LinearLayout>
-
-
             <TextView
                 android:id="@+id/tvMail"
                 android:layout_width="333dp"
                 android:layout_height="wrap_content"
                 android:text="EMAIL"
                 android:textStyle="bold"
-
                 tools:layout_editor_absoluteX="0dp" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-
-
-
-
             <EditText
                 android:id="@+id/editTextTextEmailAddress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
+                android:hint="Email"
                 android:inputType="textEmailAddress" />
 
             <Spinner
@@ -145,9 +140,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:entries="@array/tipo" />
-
         </LinearLayout>
-
+            <TextView
+                android:id="@+id/tvDireccion"
+                android:layout_width="333dp"
+                android:layout_height="wrap_content"
+                android:text="DIRECCION"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="0dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/editTextDireccion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Direccion"
+                    android:inputType="textEmailAddress" />
+            </LinearLayout>
             <TextView
                 android:id="@+id/tvFecNac"
                 android:layout_width="333dp"
@@ -169,8 +181,6 @@
                 android:id="@+id/btn_continuar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
-
                 android:backgroundTint="#095E85"
                 android:backgroundTintMode="add"
                 android:onClick="Continuar"
