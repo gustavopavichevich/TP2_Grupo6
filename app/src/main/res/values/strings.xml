@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">EjercicioControles - Grupo 6</string>
+    <string name="boton_ejercicio1">Ejercicio 1</string>
+    <string name="boton_ejercicio2">Ejercicio 2</string>
+    <string name="check_deporte">Deportes</string>
+    <string name="check_arte">Artes</string>
+    <string name="check_Musica">Música</string>
+    <string name="check_Tecnologia">Tecnologias</string>
+    <string name="radio_Primario_Incom">Primario Incompleto</string>
+    <string name="radio_Primario_Com">Primario completo</string>
+    <string name="radio_Secundario_incom">Secundario Incompleto</string>
+    <string name="radio_Secundario_com">Secundario completo</string>
+    <string name="radio_Otros">Otros estudios</string>
+    <string name="Boton_continuar">Continuar</string>
+    <string name="titulo_formulario">FORMULARIO DE CONTACTO</string>
+    <string name="Descripcion2">A continuacion, por favor se pide completar mas datos personales.</string>
+    <string name="txt_nivel">Nivel de estudios Alcanzados</string>
+    <string name="txt_Intereses">Intereres</string>
+    <string name="txt_informacion">¿Desea recibir información?</string>
+    <string name="Swict_info">Si</string>
+    <string name="Boton_guardar">Guardar</string>
+
+
+
+
+    <string-array name="tipo">
+        <item>Casa</item>
+        <item>Trabajo</item>
+        <item>Movil</item>
+    </string-array>
+</resources>
