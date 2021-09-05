@@ -9,111 +9,113 @@
     android:backgroundTint="#EFF6F5"
     tools:context=".agregar">
 
-    <ScrollView
-        android:layout_width="372dp"
-        android:layout_height="693dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="386dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="FORMULARIO DE CONTACTO"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_Segundo_N"
+        android:layout_width="384dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Este es un formulario destinado al registro de personas, sus datos personales e intereses."
+        android:textSize="19sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="371dp"
+        android:layout_height="593dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:scrollbars="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_Segundo_N"
+        tools:ignore="MissingConstraints,SpeakableTextPresentCheck">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/textView1"
-            android:layout_width="386dp"
-            android:layout_height="35dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:text="FORMULARIO DE CONTACTO"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-        <TextView
-            android:id="@+id/txt_Segundo_N"
-            android:layout_width="384dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
-            android:text="Este es un formulario destinado al registro de personas, sus datos personales e intereses."
-            android:textSize="19sp"
-            app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/tvNombre"
+                android:layout_width="333dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="NOMBRE"
+                android:textStyle="bold"
 
-
-        <TextView
-            android:id="@+id/tvNombre"
-            android:layout_width="333dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
-            android:text="NOMBRE"
-            android:textStyle="bold"
-
-            tools:layout_editor_absoluteX="0dp" />
-
-
-        <EditText
-            android:id="@+id/editTextTextPersonName2"
-            android:layout_width="334dp"
-            android:layout_height="60dp"
-            android:ems="10"
-            android:hint="Nombre"
-            android:inputType="textPersonName" />
-
-        <TextView
-            android:id="@+id/tvApe"
-            android:layout_width="333dp"
-            android:layout_height="wrap_content"
-            android:text="APELLIDO"
-            android:textStyle="bold"
-
-            tools:layout_editor_absoluteX="0dp" />
-
-
-        <EditText
-            android:id="@+id/edApe"
-            android:layout_width="334dp"
-            android:layout_height="60dp"
-            android:ems="10"
-            android:hint="Apellido"
-            android:inputType="textPersonName" />
-
-        <TextView
-            android:id="@+id/tvTel"
-            android:layout_width="333dp"
-            android:layout_height="wrap_content"
-            android:text="TELEFONO"
-            android:textStyle="bold"
-
-            tools:layout_editor_absoluteX="0dp" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
+                tools:layout_editor_absoluteX="0dp" />
 
 
             <EditText
-                android:id="@+id/editTextPhone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/editTextTextPersonName2"
+                android:layout_width="334dp"
+                android:layout_height="60dp"
                 android:ems="10"
-                android:hint="Telefono"
-                android:inputType="phone" />
+                android:hint="Nombre"
+                android:inputType="textPersonName" />
 
-            <Spinner
-                android:id="@+id/spinner"
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/tvApe"
+                android:layout_width="333dp"
                 android:layout_height="wrap_content"
-                android:entries="@array/tipo" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+                android:text="APELLIDO"
+                android:textStyle="bold"
+
+                tools:layout_editor_absoluteX="0dp" />
+
+
+            <EditText
+                android:id="@+id/edApe"
+                android:layout_width="334dp"
+                android:layout_height="60dp"
+                android:ems="10"
+                android:hint="Apellido"
+                android:inputType="textPersonName" />
+
+            <TextView
+                android:id="@+id/tvTel"
+                android:layout_width="333dp"
+                android:layout_height="wrap_content"
+                android:text="TELEFONO"
+                android:textStyle="bold"
+
+                tools:layout_editor_absoluteX="0dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+
+                <EditText
+                    android:id="@+id/editTextPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="Telefono"
+                    android:inputType="phone" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/tipo" />
+            </LinearLayout>
             <TextView
                 android:id="@+id/tvMail"
                 android:layout_width="333dp"
@@ -139,18 +141,13 @@
                     android:layout_height="wrap_content"
                     android:entries="@array/tipo" />
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/tvDireccion"
+                android:layout_width="333dp"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tvDireccion"
-                    android:layout_width="333dp"
-                    android:layout_height="wrap_content"
-                    android:text="DIRECCION"
-                    android:textStyle="bold"
-                    tools:layout_editor_absoluteX="0dp" />
-            </LinearLayout>
+                android:text="DIRECCION"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="0dp" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -163,46 +160,38 @@
                     android:hint="Direccion"
                     android:inputType="textEmailAddress" />
             </LinearLayout>
-            <LinearLayout
+            <TextView
+                android:id="@+id/tvFecNac"
+                android:layout_width="333dp"
+                android:layout_height="wrap_content"
+                android:text="FECHA DE NACIMIENTO"
+                android:textStyle="bold"
+
+                tools:layout_editor_absoluteX="0dp" />
+
+
+            <EditText
+                android:id="@+id/editTextDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:id="@+id/tvFecNac"
-                    android:layout_width="333dp"
-                    android:layout_height="wrap_content"
-                    android:text="FECHA DE NACIMIENTO"
-                    android:textStyle="bold"
+                android:ems="10"
+                android:inputType="date" />
 
-                    tools:layout_editor_absoluteX="0dp" />
-
-
-                <EditText
-                    android:id="@+id/editTextDate"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="date" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
+            <Button
+                android:id="@+id/btn_continuar"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:backgroundTint="#095E85"
+                android:backgroundTintMode="add"
+                android:onClick="Continuar"
+                android:text="@string/Boton_continuar"
+                android:textSize="20sp" />
 
-                <Button
-                    android:id="@+id/btn_continuar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#095E85"
-                    android:backgroundTintMode="add"
-                    android:onClick="Continuar"
-                    android:text="@string/Boton_continuar"
-                    android:textSize="20sp" />
-            </LinearLayout>
 
         </LinearLayout>
-    </ScrollView>
 
+
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

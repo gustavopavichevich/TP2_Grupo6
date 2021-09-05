@@ -54,46 +54,62 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/txt_nivel"
+                    android:textSize="20sp" />
                 <RadioGroup
-                    android:id="@+id/radioGroup"
+                    android:id="@+id/radioGroupp"
                     android:layout_width="351dp"
-                    android:layout_height="268dp"
+                    android:layout_height="100dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.231"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txt_Segundo_N">
-                    <TextView
-                        android:id="@+id/textView7"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/txt_nivel"
-                        android:textSize="20sp" />
                     <RadioButton
-                        android:id="@+id/radioButton"
+                        android:id="@+id/radio_Primario_Incom"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/radio_Primario_Incom" />
 
                     <RadioButton
-                        android:id="@+id/radioButton2"
+                        android:id="@+id/radio_Primario_Com"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/radio_Primario_Com" />
-
+                </RadioGroup>
+                <RadioGroup
+                    android:id="@+id/radioGroups"
+                    android:layout_width="351dp"
+                    android:layout_height="100dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.231"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_Segundo_N">
                     <RadioButton
-                        android:id="@+id/radioButton3"
+                        android:id="@+id/radio_Secundario_incom"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/radio_Secundario_incom" />
 
                     <RadioButton
-                        android:id="@+id/radioButton6"
+                        android:id="@+id/radio_Secundario_com"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/radio_Secundario_com" />
-
+                </RadioGroup>
+                <RadioGroup
+                    android:id="@+id/radioGroupo"
+                    android:layout_width="351dp"
+                    android:layout_height="50dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.231"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txt_Segundo_N">
                     <RadioButton
-                        android:id="@+id/radioButton7"
+                        android:id="@+id/radio_Otros"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/radio_Otros" />
@@ -121,22 +137,22 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:id="@+id/checkBox3"
+                    android:id="@+id/check_Musica"
                     android:layout_width="130dp"
                     android:layout_height="49dp"
                     android:text="@string/check_Musica"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+                    app:layout_constraintTop_toBottomOf="@+id/check_deporte" />
 
                 <CheckBox
-                    android:id="@+id/checkBox4"
+                    android:id="@+id/check_Tecnologia"
                     android:layout_width="130dp"
                     android:layout_height="49dp"
                     android:text="@string/check_Tecnologia"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toEndOf="@+id/checkBox3"
-                    app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+                    app:layout_constraintStart_toEndOf="@+id/check_Musica"
+                    app:layout_constraintTop_toBottomOf="@+id/check_arte" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -144,17 +160,17 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:id="@+id/checkBox"
+                    android:id="@+id/check_deporte"
                     android:layout_width="130dp"
                     android:layout_height="49dp"
                     android:text="@string/check_deporte"
-                    app:layout_constraintEnd_toStartOf="@+id/checkBox2"
+                    app:layout_constraintEnd_toStartOf="@+id/check_arte"
                     app:layout_constraintHorizontal_bias="1.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
                 <CheckBox
-                    android:id="@+id/checkBox2"
+                    android:id="@+id/check_arte"
                     android:layout_width="130dp"
                     android:layout_height="49dp"
                     android:text="@string/check_arte"
@@ -174,7 +190,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintVertical_bias="0.0" />
                 <Switch
-                    android:id="@+id/switch1"
+                    android:id="@+id/Swict_info"
                     android:layout_width="69dp"
                     android:layout_height="35dp"
                     android:height="10dp"
@@ -187,15 +203,16 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/Boton_guardar"
                     android:layout_width="104dp"
                     android:layout_height="53dp"
                     android:layout_marginStart="276dp"
+                    android:onClick="Guardar"
                     android:text="@string/Boton_guardar"
                     android:textSize="12sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/switch1" />
+                    app:layout_constraintTop_toBottomOf="@+id/Swict_info" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

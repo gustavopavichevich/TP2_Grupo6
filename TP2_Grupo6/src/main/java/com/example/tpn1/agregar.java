@@ -50,8 +50,8 @@ public class agregar extends AppCompatActivity {
         continuar.putExtra("email",et_email.getText().toString());
         continuar.putExtra("direccion",et_direccion.getText().toString());
         continuar.putExtra("fecha",et_fecha.getText().toString());
-        continuar.putExtra("spinner1",s1.toString());
-        continuar.putExtra("spinner2",s2.toString());
+        continuar.putExtra("spinner1",s1.getSelectedItem().toString());
+        continuar.putExtra("spinner2",s2.getSelectedItem().toString());
         startActivity(continuar );
     }
 }
