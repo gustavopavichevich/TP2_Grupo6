@@ -79,28 +79,22 @@ public class Formulario2 extends AppCompatActivity {
         SharedPreferences.Editor obj_editor=preferencias.edit();
 
         obj_editor.putString(nombre+ " "+ apellido,email);
-        /*obj_editor.putString(nombre,apellido);
-        obj_editor.putString(nombre,telefono);
-        obj_editor.putString(nombre,email);
-        obj_editor.putString(nombre,direccion);
-        obj_editor.putString(nombre,fecha);
-        obj_editor.putString(nombre,s1);
-        obj_editor.putString(nombre,s2);
 
-        obj_editor.putBoolean(nombre,deporte);
-        obj_editor.putBoolean(nombre,arte);
-        obj_editor.putBoolean(nombre,musica);
-        obj_editor.putBoolean(nombre,tecnologia);
 
-        obj_editor.putBoolean(nombre,primario_c);
-        obj_editor.putBoolean(nombre,primario_i);
-        obj_editor.putBoolean(nombre,secuendario_c);
-        obj_editor.putBoolean(nombre,secuendario_i);
-        obj_editor.putBoolean(nombre,otros_estudios);
 
-        obj_editor.putString(nombre,Desea_info);*/
+        //este almacenamiento seria para cuando seleccionan in item del listview del listar.xml traiga los datos extras del contacto almacenado.
+        SharedPreferences preferencias_extra = getSharedPreferences("datosextra", Context.MODE_PRIVATE);
+        SharedPreferences.Editor obj_editor_extra=preferencias_extra.edit();
+        String clave=nombre+apellido+" - "+email;
+        String datos="Datos Perosnales telefono: " +telefono+ ", direccion: "+ direccion+ ", fecha nacimiento: " + fecha + " ; ";
+        String datos2="Interes musica: " + musica + ", deporte: " + deporte + ", arte: " + arte + ", tecnologia: " + tecnologia + " ; " ;
+        String datos3="Estudio Primario Completo: " + primario_c + ", primario imcmpleto: " + primario_i +
+                ", Secundario completo" + secuendario_c + ", secuendario incompleto: " + secuendario_i + ", otros: " + otros_estudios +
+                ", desea info: " + Desea_info;
 
-        obj_editor.commit();
+        obj_editor_extra.putString(clave, datos+datos2+datos3);
+
+        obj_editor_extra.commit();
         Toast.makeText(this,"Los datos se almacenaron correctamente",Toast.LENGTH_SHORT).show();
 
 

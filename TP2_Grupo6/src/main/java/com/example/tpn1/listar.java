@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Map;
@@ -29,6 +30,7 @@ public class listar extends AppCompatActivity {
         CargarContactosAlmacenados();
 
     }
+
     private void CargarContactosAlmacenados()
     {
         SharedPreferences preferencias = getSharedPreferences("datos", Context.MODE_PRIVATE);
@@ -36,6 +38,14 @@ public class listar extends AppCompatActivity {
         for(Map.Entry<String,?> ele : contactos.entrySet()){
             datos.add(ele.getKey()+" - " +ele.getValue().toString());
         }
+
+    }
+    public void ObtenerDatosExtrasContacto(View view)
+    {
+        String key= L_datos.getSelectedItem().toString();
+        SharedPreferences preferencias = getSharedPreferences("datosextra", Context.MODE_PRIVATE);
+        String extras = preferencias.getString(key,"");
+        Toast.makeText(this,extras,Toast.LENGTH_LONG).show();
 
     }
 }
