@@ -34,17 +34,22 @@ public class listar extends AppCompatActivity {
     private void CargarContactosAlmacenados()
     {
         SharedPreferences preferencias = getSharedPreferences("datos", Context.MODE_PRIVATE);
+        SharedPreferences preferencias2 = getSharedPreferences("datosextra", Context.MODE_PRIVATE);
         Map<String,?> contactos = preferencias.getAll();
+        Map<String,?> contactosextras = preferencias2.getAll();
         for(Map.Entry<String,?> ele : contactos.entrySet()){
             datos.add(ele.getKey()+" - " +ele.getValue().toString());
+            for(Map.Entry<String,?> ele2 : contactosextras.entrySet()){
+                datos.add(ele2.getKey()+" - " +ele2.getValue().toString());
+            }
         }
 
     }
     public void ObtenerDatosExtrasContacto(View view)
     {
         String key= L_datos.getSelectedItem().toString();
-        SharedPreferences preferencias = getSharedPreferences("datosextra", Context.MODE_PRIVATE);
-        String extras = preferencias.getString(key,"");
+        SharedPreferences preferencias2 = getSharedPreferences("datosextra", Context.MODE_PRIVATE);
+        String extras = preferencias2.getString(key,"");
         Toast.makeText(this,extras,Toast.LENGTH_LONG).show();
 
     }

@@ -79,6 +79,7 @@ public class Formulario2 extends AppCompatActivity {
         SharedPreferences.Editor obj_editor=preferencias.edit();
 
         obj_editor.putString(nombre+ " "+ apellido,email);
+        obj_editor.commit();
 
 
 
