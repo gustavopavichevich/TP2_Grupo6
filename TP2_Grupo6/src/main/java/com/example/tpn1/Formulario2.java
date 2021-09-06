@@ -3,16 +3,16 @@ package com.example.tpn1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.Toast;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Formulario2 extends AppCompatActivity {
 
@@ -29,6 +29,12 @@ public class Formulario2 extends AppCompatActivity {
 
     private Switch sw_Info;
 
+    //Controles de ingresos
+    private boolean bNombre = true;
+    private boolean bApellido = true;
+    private boolean bTelefono = true;
+    private boolean bEmail = true;
+    private boolean bFechaNacimiento = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,7 +85,15 @@ public class Formulario2 extends AppCompatActivity {
         SharedPreferences.Editor obj_editor=preferencias.edit();
 
         obj_editor.putString(nombre+ " "+ apellido,email);
-        obj_editor.commit();
+        if(controlNombre(nombre) || controlCorreo(email)) {
+            obj_editor.commit();
+        }else{
+            if(controlNombre(nombre))
+                Toast.makeText(this, "Corrobore el formato del nombre", Toast.LENGTH_SHORT).show();
+            if(controlCorreo(email))
+            Toast.makeText(this,"Corrobore el formato del nombre",Toast.LENGTH_SHORT).show();
+
+        }
 
 
 
@@ -97,7 +111,31 @@ public class Formulario2 extends AppCompatActivity {
 
         obj_editor_extra.commit();
         Toast.makeText(this,"Los datos se almacenaron correctamente",Toast.LENGTH_SHORT).show();
-
-
     }
+
+    public boolean controlCorreo(String email){
+        // Patrón para validar el email
+        Pattern pattern = Pattern
+                .compile("^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@"
+                        + "[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$");
+
+        Matcher mather = pattern.matcher(email);
+
+        if (mather.find() == true) {
+            System.out.println("El email ingresado es válido.");
+        } else {
+            System.out.println("El email ingresado es inválido.");
+            return false;
+        }
+        return true;
+    }
+
+    public boolean controlNombre(String nombre) {
+        for (int i = 0; i < nombre.length(); i++) {
+            if (Character.isDigit(i))
+                return false;
+        }
+        return true;
+    }
+
 }
